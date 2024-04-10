@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***** body of the webpage *****/
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/***** css for the header *****/
+header {
+    background-color: #333;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    width: 100%; 
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/***** css for the form *****/
+form {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 85vh;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/***** css for the user input boxes *****/
+input[type="text"],
+input[type="email"],
+input[type="tel"], 
+textarea {
+    width: 100%;
+    padding: 12px; 
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; 
+}
+
+/*****css for the submit button*****/
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*****makes the color slightly darker when hovering over button*****/
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/***** css for the speak button *****/
+button[type="speak"] {
+    font-size: 16px;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+/*****the following code is makes the website smartphone friendly*****/
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
