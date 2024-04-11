@@ -1,93 +1,58 @@
-document.getElementById("userInfoForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+// function for making the cards enlarged when hovering over them //
+function enlargeCard(card) {
+    card.classList.add("enlarged");
+}
 
-    // variables created for the scripts
-    var firstNameInput = document.getElementById("firstname");
-    var lastNameInput = document.getElementById("lastname");
-    var mobileNumberInput = document.getElementById("mobilenumber");
-    var customerEmailInput = document.getElementById("customerEmail");
-    var addressInput = document.getElementById("address");
+function shrinkCard(card) {
+    card.classList.remove("enlarged");
+}
 
-    // error variables created for the scripts
-    var firstNameError = document.getElementById("firstnameError");
-    var lastNameError = document.getElementById("lastnameError");
-    var mobileNumberError = document.getElementById("mobilenumberError");
-    var customerEmailError = document.getElementById("customerEmailError");
-    var addressError = document.getElementById("addressError");
-    var isValid = true;
-
-    // if statement that checks if the website inputs are all valid
-    if (!firstNameInput.value) {
-        firstNameError.style.display = "block";
-        isValid = false;
-    } else {
-        firstNameError.style.display = "none";
-    }
-
-    if (!lastNameInput.value) {
-        lastNameError.style.display = "block";
-        isValid = false;
-    } else {
-        lastNameError.style.display = "none";
-    }
-
-    if (!mobileNumberInput.checkValidity()) {
-        mobileNumberError.style.display = "block";
-        isValid = false;
-    } else {
-        mobileNumberError.style.display = "none";
-    }
-
-    if (!customerEmailInput.checkValidity()) {
-        customerEmailError.style.display = "block";
-        isValid = false;
-    } else {
-        customerEmailError.style.display = "none";
-    }
-
-    if (!addressInput.value) {
-        addressError.style.display = "block";
-        isValid = false;
-    } else {
-        addressError.style.display = "none";
-    }
-
-
-    // script for submit button
-    if (isValid) {
-        var userInfoDiv = document.getElementById("userInfo");
-        var userInfoHTML = "<strong>User Information:</strong><br>";
-        userInfoHTML += "First Name: " + firstNameInput.value + "<br>";
-        userInfoHTML += "Last Name: " + lastNameInput.value + "<br>";
-        userInfoHTML += "Mobile Number: " + mobileNumberInput.value + "<br>";
-        userInfoHTML += "Email: " + customerEmailInput.value + "<br>";
-        userInfoHTML += "Address: " + addressInput.value + "<br>";
-        userInfoDiv.innerHTML = userInfoHTML;
-        alert("Your information has been submitted and a confirmation email has been sent. Thank you");
-    } else {
-        alert("Please fill in all required fields correctly.");
-    }
+// code for each seperate card to become enlarged after hovering over it //
+document.getElementById("card1").addEventListener("mouseover", function() {
+    enlargeCard(this);
 });
 
-// script for text-to-speech button
+document.getElementById("card1").addEventListener("mouseout", function() {
+    shrinkCard(this);
+});
+
+
+document.getElementById("card2").addEventListener("mouseover", function() {
+    enlargeCard(this);
+});
+
+document.getElementById("card2").addEventListener("mouseout", function() {
+    shrinkCard(this);
+});
+
+
+
+document.getElementById("card3").addEventListener("mouseover", function() {
+    enlargeCard(this);
+});
+
+document.getElementById("card3").addEventListener("mouseout", function() {
+    shrinkCard(this);
+});
+
+
+
+document.getElementById("card4").addEventListener("mouseover", function() {
+    enlargeCard(this);
+});
+
+document.getElementById("card4").addEventListener("mouseout", function() {
+    shrinkCard(this);
+});
+
+// script for the text to speech button //
 document.getElementById("speakButton").addEventListener("click", function() {
-    var firstNameInput = document.getElementById("firstname").value;
-    var lastNameInput = document.getElementById("lastname").value;
-    var mobileNumberInput = document.getElementById("mobilenumber").value;
-    var customerEmailInput = document.getElementById("customerEmail").value;
-    var addressInput = document.getElementById("address").value;
 
-    var text = "The information that you have provided are the following: ";
-    text += "First Name is: " + firstNameInput + ". ";
-    text += "Last Name is: " + lastNameInput + ". ";
-    text += "Mobile Number is: " + mobileNumberInput + ". ";
-    text += "Email Address is: " + customerEmailInput + ". ";
-    text += "Postal Address is: " + addressInput + ". ";
-    text += "Press the green submit button if you would like to continue.";
-
-    // Create a new SpeechSynthesisUtterance object
+    var text = "Please select the genre of book you would like to browse: fiction, non fiction, romance and classic"
+    
+    // website collects the variables to make its script to say //
     var utterance = new SpeechSynthesisUtterance(text);
 
-    // Speak the text
+    // code for the website to say the script //
     window.speechSynthesis.speak(utterance);
 });

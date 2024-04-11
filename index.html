@@ -3,50 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hit226_group5_sprint2</title>
+    <title>Bookshop</title>
+
+    <!-- linking this html to the css -->
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<header>
-    <h1><strong>Bookshop Delivery</strong></h1> 
-</header>
 
-
-
-<form id="userInfoForm">
-    <label for="firstname">First Name:</label>
-    <input type="text" id="firstname" name="firstname" placeholder="Please enter your first name" required>
-    <span class="error-message" id="firstnameError"></span>
-
-
-    <label for="lastname">Last Name:</label>
-    <input type="text" id="lastname" name="lastname" placeholder="Please enter your last name" required>
-    <span class="error-message" id="lastnameError"></span>
-    
-    
-    <label for="mobilenumber">Mobile Number:</label>
-    <div class="input-container">
-        <input type="tel" id="mobilenumber" name="mobilenumber" pattern="[0-9]{10}" placeholder="Please enter a 10-digit mobile number" required>
-        <span class="error-message" id="mobilenumberError"></span>
+<!-- below is code for the heading panel -->
+<div class="header">
+    <div class="panel">
+        <h1>Bookshop</h1>
     </div>
-    
-    
-    <label for="customerEmail">Email:</label>
-    <input type="email" id="customerEmail" name="customerEmail" placeholder="Enter a valid email address" required>
-    <span class="error-message" id="customerEmailError"></span>
-    
-    
-    <label for="address">Address:</label>
-    <textarea id="address" name="address" rows="4" cols="50" placeholder="Please enter a postal address" required></textarea>
-    <span class="error-message" id="addressError"></span>
-    
-    <button type="submit" id="submitButt">Submit</button>
-    
-    <button type="speak" id="speakButton">Speak</button>
-</form>
+</div>
 
+<!-- message for the users -->
+<h2>Select the Genre of book you would like to browse:</h2>
 
-<div id="userInfo"></div>
+<!-- code for the cards and the card container -->
+<div class="card-container">
+
+    <div class="card" id="card1">
+        <h2>Fiction</h2>  
+    </div> 
+
+    <div class="card" id="card2">
+        <h2>Non-fiction</h2>
+    </div>
+
+    <div class="card" id="card3">
+        <h2>Romance</h2>
+    </div>
+
+    <div class="card" id="card4">
+        <h2>Classic</h2>
+    </div>
+
+</div>
+
+<!-- code for the speak button -->
+<button type="speak" id="speakButton">Speak</button>
+
+<!-- linking this html to the javascript -->
 <script src="script.js"></script>
+
 </body>
 </html>

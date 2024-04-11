@@ -1,93 +1,93 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/***** body of the webpage *****/
-body {
-    font-family: Arial, sans-serif;
-    background-color: beige;
-    color: #333;
+/* css for the cards container */
+.card-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
 }
 
-/***** css for the header *****/
-header {
+/* css for the cards themselves */
+.card {
+    width: 250px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease, border-width 0.3s ease; 
+}
+
+/* css for the cards heading */
+.card h2 {
+    color: #333; /* Text color for the header */
+    border: 2px solid white; /* Add a white border around the header */
+    padding: 10px; /* Optional: Add padding to create space between text and border */
+    background-color: white;
+    border-width: 50%;
+}
+
+/* css for making the background image of the first card */
+#card1 {
+    background-image: url("https://plus.unsplash.com/premium_photo-1669888245224-8fe296e1bc60?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border-radius: 8px; 
+}
+
+/* css for making the background image of the second card */
+#card2 {
+    background-image: url("https://images.unsplash.com/photo-1617720197521-cac54ab8fe8b?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border-radius: 8px; 
+}
+
+/* css for making the background image of the third card */
+#card3 {
+    background-image: url("https://images.unsplash.com/photo-1426543881949-cbd9a76740a4?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border-radius: 8px; 
+}
+
+/* css for making the background image of the fourth card */
+#card4 {
+    background-image: url("https://images.unsplash.com/photo-1597149306035-5f6758b04d57?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border-radius: 8px; 
+}
+
+/* css for the header of the website */
+.header {
     background-color: #333;
     color: white;
-    padding: 50px;
     text-align: center;
-    width: 100%; 
+    padding: 20px 0;
 }
 
-h1 {
-    font-size: 2.5rem;
+/* css for the heading panel of the website */
+.panel {
+    background-color: #333;
+    padding: 20px;
+    width: 100%; /* Adjusts the panel to reach the edges of the screen */
+    box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
-/***** css for the form *****/
-form {
-    position: fixed;
-    bottom: 0;
-    background-color: white;
-    padding: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 85vh;
+/* css for the enlarged form of the cards */
+.enlarged {
+    transform: scale(1.1); /* Enlarge the card slightly */
+    transition: transform 0.3s ease; /* Add smooth transition */
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/***** css for the user input boxes *****/
-input[type="text"],
-input[type="email"],
-input[type="tel"], 
-textarea {
-    width: 100%;
-    padding: 12px; 
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px; 
-}
-
-/*****css for the submit button*****/
-button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/*****makes the color slightly darker when hovering over button*****/
-button[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-/***** css for the speak button *****/
+/* css for the speak button */
 button[type="speak"] {
     font-size: 16px;
     color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-}
-
-/*****the following code is makes the website smartphone friendly*****/
-@media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
 }
